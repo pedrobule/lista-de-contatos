@@ -53,10 +53,21 @@ const contatoSlice = createSlice({
       if (indexDoContato >= 0) {
         state.itens[indexDoContato] = action.payload
       }
+    },
+    inserir: (state, action: PayloadAction<Contato>) => {
+      const novoContato = state.itens.find(
+        (contato) =>
+          contato.nome.toLocaleLowerCase() ===
+          action.payload.nome.toLocaleLowerCase()
+      )
+
+      if (novoContato) {
+        state.itens.push(action.payload)
+      }
     }
   }
 })
 
-export const { excluir, editar } = contatoSlice.actions
+export const { excluir, editar, inserir } = contatoSlice.actions
 
 export default contatoSlice.reducer

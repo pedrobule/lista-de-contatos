@@ -19,7 +19,7 @@ const ListaDeContatos = () => {
   }
   return (
     <Container>
-      <p>Lista de Contatos</p>
+      <h1>Lista de Contatos</h1>
       <p>Você pesquisou: &quot;{termo}&quot;</p>
       <ul>
         {filtroContato().map((t) => (

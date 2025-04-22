@@ -5,7 +5,7 @@ export const Barra = styled.div`
   height: 100vh;
 `
 
-export const Aside = styled.aside`
+export const Form = styled.form`
   padding: 16px;
 `
 
